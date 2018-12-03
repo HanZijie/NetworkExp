@@ -4,11 +4,11 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/zijiehan/Desktop/rdt-linux - student/rdt/stop_wait/src/GBNReciever.cpp" "/home/zijiehan/Desktop/rdt-linux - student/rdt/stop_wait/CMakeFiles/stop_wait.dir/src/GBNReciever.cpp.o"
-  "/home/zijiehan/Desktop/rdt-linux - student/rdt/stop_wait/src/GBNSender.cpp" "/home/zijiehan/Desktop/rdt-linux - student/rdt/stop_wait/CMakeFiles/stop_wait.dir/src/GBNSender.cpp.o"
-  "/home/zijiehan/Desktop/rdt-linux - student/rdt/stop_wait/src/StopWait.cpp" "/home/zijiehan/Desktop/rdt-linux - student/rdt/stop_wait/CMakeFiles/stop_wait.dir/src/StopWait.cpp.o"
-  "/home/zijiehan/Desktop/rdt-linux - student/rdt/stop_wait/src/StopWaitRdtReceiver.cpp" "/home/zijiehan/Desktop/rdt-linux - student/rdt/stop_wait/CMakeFiles/stop_wait.dir/src/StopWaitRdtReceiver.cpp.o"
-  "/home/zijiehan/Desktop/rdt-linux - student/rdt/stop_wait/src/StopWaitRdtSender.cpp" "/home/zijiehan/Desktop/rdt-linux - student/rdt/stop_wait/CMakeFiles/stop_wait.dir/src/StopWaitRdtSender.cpp.o"
+  "/home/zijiehan/Desktop/rdt-linux - student/rdt/GBN/src/GBNReciever.cpp" "/home/zijiehan/Desktop/rdt-linux - student/rdt/GBN/CMakeFiles/stop_wait.dir/src/GBNReciever.cpp.o"
+  "/home/zijiehan/Desktop/rdt-linux - student/rdt/GBN/src/GBNSender.cpp" "/home/zijiehan/Desktop/rdt-linux - student/rdt/GBN/CMakeFiles/stop_wait.dir/src/GBNSender.cpp.o"
+  "/home/zijiehan/Desktop/rdt-linux - student/rdt/GBN/src/StopWait.cpp" "/home/zijiehan/Desktop/rdt-linux - student/rdt/GBN/CMakeFiles/stop_wait.dir/src/StopWait.cpp.o"
+  "/home/zijiehan/Desktop/rdt-linux - student/rdt/GBN/src/StopWaitRdtReceiver.cpp" "/home/zijiehan/Desktop/rdt-linux - student/rdt/GBN/CMakeFiles/stop_wait.dir/src/StopWaitRdtReceiver.cpp.o"
+  "/home/zijiehan/Desktop/rdt-linux - student/rdt/GBN/src/StopWaitRdtSender.cpp" "/home/zijiehan/Desktop/rdt-linux - student/rdt/GBN/CMakeFiles/stop_wait.dir/src/StopWaitRdtSender.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

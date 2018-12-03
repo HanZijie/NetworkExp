@@ -16,8 +16,8 @@ int main(int argc, char** argv[])
 	pns->init();
 	pns->setRtdSender(ps);
 	pns->setRtdReceiver(pr);
-	pns->setInputFile("/home/zijiehan/Desktop/NetworkExp/input.txt");
-	pns->setOutputFile("/home/zijiehan/Desktop/NetworkExp/output.txt");
+	pns->setInputFile("input.txt");
+	pns->setOutputFile("output.txt");
 	pns->start();
 
 	delete ps;

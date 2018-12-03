@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/home/zijiehan/Desktop/rdt-linux - student/rdt/stop_wait"
+CMAKE_SOURCE_DIR = "/home/zijiehan/Desktop/rdt-linux - student/rdt/GBN"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/home/zijiehan/Desktop/rdt-linux - student/rdt/stop_wait"
+CMAKE_BINARY_DIR = "/home/zijiehan/Desktop/rdt-linux - student/rdt/GBN"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/zijiehan/Desktop/rdt-linux - student/rdt/stop_wait/CMakeFiles" "/home/zijiehan/Desktop/rdt-linux - student/rdt/stop_wait/CMakeFiles/progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/zijiehan/Desktop/rdt-linux - student/rdt/GBN/CMakeFiles" "/home/zijiehan/Desktop/rdt-linux - student/rdt/GBN/CMakeFiles/progress.marks"
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/zijiehan/Desktop/rdt-linux - student/rdt/stop_wait/CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/zijiehan/Desktop/rdt-linux - student/rdt/GBN/CMakeFiles" 0
 .PHONY : all
 
 # The main clean target

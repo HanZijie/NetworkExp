@@ -1,4 +1,4 @@
-# Install script for directory: /home/zijiehan/Desktop/rdt-linux - student/rdt/stop_wait
+# Install script for directory: /home/zijiehan/Desktop/rdt-linux - student/rdt/GBN
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/zijiehan/Desktop/rdt-linux - student/rdt/stop_wait/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/zijiehan/Desktop/rdt-linux - student/rdt/GBN/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

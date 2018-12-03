@@ -6,5 +6,5 @@ CXX_FLAGS =   -std=c++11
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I"/home/zijiehan/Desktop/rdt-linux - student/rdt/stop_wait/include" 
+CXX_INCLUDES = -I"/home/zijiehan/Desktop/rdt-linux - student/rdt/GBN/include" 
 
