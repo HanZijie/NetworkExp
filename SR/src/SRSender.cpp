@@ -26,7 +26,7 @@ bool SRSender::send(Message &message){
 	pckSend->checksum = pUtils->calculateCheckSum(*pckSend);
 
     // send packet and cache
-	pUtils->printPacket("发送方发送报文", *pckSend);
+	pUtils->printPacket("sender send packet", *pckSend);
 	pckBuf[waittingAckNumber] = *pckSend;
 	pns->startTimer(SENDER, Configuration::TIME_OUT, pckSend->seqnum);
 	pns->sendToNetworkLayer(RECEIVER, *pckSend);
@@ -39,10 +39,11 @@ void SRSender::receive(Packet &ackPkt){
     int checknum = pUtils->calculateCheckSum(ackPkt);
     if(checknum == ackPkt.checksum){
         pns->stopTimer(SENDER,ackPkt.acknum);
+		if (ackPkt.acknum <= base) {
+			return;
+		}
         ack[ackPkt.acknum-base-1] = 1;
-        int i = 0;
-        while(i <= 3 && ack[i] == 1){
-
+        while(ack[0] == 1){
             pckBuf[0] = pckBuf[1];
             pckBuf[1] = pckBuf[2];
             pckBuf[2] = pckBuf[3];
@@ -54,18 +55,28 @@ void SRSender::receive(Packet &ackPkt){
             ack[3] = ack[4];
 
             waittingAckNumber--;
-            base++;
-            i++;
-        }
 
-    }
+            base++;
+        }
+		if (waittingAckNumber == -1) {
+			waittingAckNumber = 0;
+		}
+		return;
+	}
+	else {
+	}
 }
 
-void SRSender::timeoutHandler(int seqNum){
-    pns->stopTimer(SENDER , seqNum);
-    printf("\n\nResend Packet: %d",seqNum);
-    pns->sendToNetworkLayer(RECEIVER,pckBuf[seqNum-base-1]);
-    pns->startTimer(SENDER,Configuration::TIME_OUT,seqNum);
+void SRSender::timeoutHandler(int seqNum) {
+	if (seqNum <= base) {
+		return;
+	}
+	pns->stopTimer(SENDER, seqNum);
+	if (pckBuf[seqNum - base - 1].seqnum == seqNum) {
+		printf("\n\nResend Packet: %d", seqNum);
+		pns->sendToNetworkLayer(RECEIVER, pckBuf[seqNum - base - 1]);
+		pns->startTimer(SENDER, Configuration::TIME_OUT, seqNum);
+	}
 }
 
 bool SRSender::getWaitingState(){
