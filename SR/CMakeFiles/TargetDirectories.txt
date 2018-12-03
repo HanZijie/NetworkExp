@@ -1,0 +1,3 @@
+/home/zijiehan/Desktop/rdt-linux - student/rdt/SR/CMakeFiles/rebuild_cache.dir
+/home/zijiehan/Desktop/rdt-linux - student/rdt/SR/CMakeFiles/stop_wait.dir
+/home/zijiehan/Desktop/rdt-linux - student/rdt/SR/CMakeFiles/edit_cache.dir
