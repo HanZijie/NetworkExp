@@ -1,5 +1,6 @@
 #pragma once
 #include "RdtSender.h"
+#include <stdio.h>
 
 class SRSender:public RdtSender{
 private:
@@ -8,6 +9,7 @@ private:
     int ack[5];
     int base;
     Packet pckBuf[5];
+    FILE* file;
 
 public:
     SRSender();

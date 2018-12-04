@@ -1,5 +1,7 @@
 #pragma once
 #include "RdtSender.h"
+#include <stdio.h>
+
 class GBNSender :
 	public RdtSender
 {
@@ -10,6 +12,7 @@ private:
 	bool backing = false;
 	int ackFlag[10];
 	Packet pckBuf[5];
+	FILE *file;
 
 public:
 	GBNSender();

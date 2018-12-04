@@ -23,6 +23,8 @@ RdtReceiver.h
 /home/zijiehan/Desktop/rdt-linux - student/rdt/GBN/include/GBNSender.h
 RdtSender.h
 /home/zijiehan/Desktop/rdt-linux - student/rdt/GBN/include/RdtSender.h
+stdio.h
+-
 
 /home/zijiehan/Desktop/rdt-linux - student/rdt/GBN/include/Global.h
 ../include/Tool.h

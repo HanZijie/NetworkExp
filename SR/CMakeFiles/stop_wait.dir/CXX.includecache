@@ -55,6 +55,8 @@ RdtReceiver.h
 /home/zijiehan/Desktop/rdt-linux - student/rdt/SR/include/SRSender.h
 RdtSender.h
 /home/zijiehan/Desktop/rdt-linux - student/rdt/SR/include/RdtSender.h
+stdio.h
+-
 
 /home/zijiehan/Desktop/rdt-linux - student/rdt/SR/include/StopWaitRdtReceiver.h
 ../include/RdtReceiver.h

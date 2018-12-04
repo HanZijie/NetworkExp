@@ -9,9 +9,12 @@ SRSender::SRSender():expectSequenceNumberSend(0),waittingAckNumber(0),base(0){
     ack[3] = 0;
     ack[4] = 0;
 
+	file = fopen("slide_info.txt","w+");
+
 }
 
 SRSender::~SRSender(){
+	fclose(file);
 }
 
 bool SRSender::send(Message &message){
@@ -43,6 +46,7 @@ void SRSender::receive(Packet &ackPkt){
 			return;
 		}
         ack[ackPkt.acknum-base-1] = 1;
+		int f_base = base;
         while(ack[0] == 1){
             pckBuf[0] = pckBuf[1];
             pckBuf[1] = pckBuf[2];
@@ -58,6 +62,9 @@ void SRSender::receive(Packet &ackPkt){
 
             base++;
         }
+		if(f_base != base){
+			fprintf(file,"From %d slide to %d\n",f_base,base);
+		}
 		if (waittingAckNumber == -1) {
 			waittingAckNumber = 0;
 		}

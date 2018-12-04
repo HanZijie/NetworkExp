@@ -5,11 +5,13 @@
 
 GBNSender::GBNSender():expectSequenceNumberSend(0),waittingAckNumber(0),base(0)
 {
+	file = fopen("slide_info.txt","w+");
 }
 
 
 GBNSender::~GBNSender()
 {
+	fclose(file);
 }
 
 bool GBNSender::send(Message &message) {
@@ -37,9 +39,9 @@ void GBNSender::receive(Packet &ackPkt) {
 		printf("\n\n### 发送方收到确认%d\n",ackPkt.acknum);
 		if (ackPkt.acknum >= base + 1)
 		{
-			printf("\n\n### 发送方开始释放内存:%d\n", base + 1);
 			pns->stopTimer(SENDER, ackPkt.acknum);
 			int newbase = ackPkt.acknum;
+			fprintf(file,"From %d slide to %d\n",base,newbase);
 			int i = base;
 			while (i < newbase)
 			{
